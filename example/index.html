@@ -20,6 +20,7 @@
         <dt>Examples</dt>
         <dd><a id="success" href="#">Success demo</a></dd>
         <dd><a id="failure" href="#">Failure demo</a></dd>
+        <dd><a id="persist" href="#">Persistence demo</a></dd>
       </dl>
     </div>
     <!-- Add this snip to your HTML -->
@@ -32,8 +33,11 @@
     <script src="../lib/js/choones.js" type="text/javascript" charset="utf-8"></script>
     <script type="text/javascript" charset="utf-8">
       $(function () {
+	$("#persist").click(function() {
+          $.choones('Hang about', 'Standing orders: this remains until another message comes', {display_time: 0});
+	});
         $("#success").click(function () {
-          $.choones('Success', 'You can hollar at your peeps in a flashy way');
+          $.choones('Success', 'You can holler at your peeps in a flashy way');
         });
         $("#failure").click(function () {
           $.choones('Boo', 'What we have here, is a failure to communicate', {type: 'failure'});
